@@ -1,351 +1,165 @@
-# NobleTrust Insurance Website
+<div align="center">
 
-A responsive website for NobleTrust Insurance company, established in 2005, showcasing comprehensive insurance products and services with a modern, user-friendly interface. The site presents NobleTrust as a trusted provider of life, health, vehicle, and property insurance solutions with over 20 years of industry experience.
+  <img src="images/Logo.webp" alt="NobleTrust Insurance Logo" width="140" height="140">
 
-## Project Status
+  # NobleTrust Insurance
 
-**Current Version**: 1.0.0  
-**Last Updated**: June 2025  
-**Status**: Active Development
+  **The Gold Standard in Comprehensive Protection**  
+  *Protecting what matters most for families and businesses since 2005.*
 
-This project is a fully responsive, static website built with HTML, CSS (via Sass), and vanilla JavaScript. It serves as the online presence for NobleTrust Insurance, allowing potential customers to explore insurance offerings, learn about the company, and make contact for quotes and information.
+  [![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
+  [![Sass](https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white)](https://sass-lang.com/)
+  [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+  [![PWA Ready](https://img.shields.io/badge/PWA-Ready-5A0FC8?style=for-the-badge&logo=pwa&logoColor=white)](site.webmanifest)
+  [![WCAG AA](https://img.shields.io/badge/Accessibility-WCAG%20AA-success?style=for-the-badge)](TECHNICAL.md#1-color-palette--wcag-aa-contrast-compliance)
+  [![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg?style=for-the-badge)](LICENSE)
 
-The website focuses on creating a professional, trustworthy impression while providing an intuitive user experience across all device sizes. The design emphasizes NobleTrust's core values of integrity, customer-centricity, and transparency.
+  [**Explore Packages**](packages.html) • [**About Us**](about.html) • [**Customer Feedback**](feedback.html) • [**Technical Specs**](TECHNICAL.md)
 
-## Features
+</div>
 
-- Responsive design that works on mobile, tablet, and desktop devices
-- Image slider on the homepage showcasing different insurance types
-- Product showcase with detailed information about insurance packages:
-  - Gold Health Plan with cashless hospitalization and annual checkups
-  - Gold Life Cover for family protection
-  - Vehicle insurance plans
-  - Property insurance coverage
-  - Custom business solutions
-- Contact form for inquiries with email and phone contact options
-- Customer feedback system featuring testimonials from satisfied clients
-- About page with company history, mission, vision, and team information
-- Smooth page transitions and loading animations between all pages
+---
 
-## Technologies Used
+## 🌟 About NobleTrust
 
-- HTML5 for semantic structure and content
-- CSS3 for styling and responsive design
-- Sass (SCSS) for modular, maintainable CSS organization
-- JavaScript (vanilla) for interactive features and page transitions
-- Node.js and npm for development tools and Sass compilation
+Founded in 2005, **NobleTrust Insurance** has built over two decades of industry leadership and customer trust. We deliver transparent, flexible, and affordable insurance coverage that empowers individuals, families, and organizations to live and build with confidence.
 
-## Project Structure
+### 💎 Core Values
+* **Integrity:** Upholding the highest ethical standards across every policy and claim.
+* **Customer-Centricity:** Placing your peace of mind and protection at the heart of our operations.
+* **Innovation:** Designing modern, accessible insurance solutions for evolving lifestyle and enterprise needs.
+* **Transparency:** Clear terms, zero hidden clauses, and direct claim settlements.
+* **Community:** Giving back and fostering resilient, empowered communities.
+
+---
+
+## 🛡️ Insurance Offerings
+
+| Package | Highlights | Key Benefits |
+| :--- | :--- | :--- |
+| 🏥 **Gold Health Plan** | Comprehensive medical protection | Cashless hospitalization, annual health checkups, family floater options, wellness rewards |
+| 🛡️ **Gold Life Cover** | Future security for your family | High coverage caps, flexible premium structures, accidental death benefits, 24/7 support |
+| 🚗 **Gold Vehicle Insurance** | Roadside & collision coverage | Zero depreciation, 24/7 roadside assistance, instant digital policy issuance, cashless repairs |
+| 🏠 **Gold Property Insurance** | Home and asset protection | Structure & contents coverage, natural disaster protection, theft safeguards, rapid claims |
+| 🏢 **Custom Enterprise Solutions** | Tailored commercial coverage | Tailored business risk management, liability coverage, employee group plans |
+
+---
+
+## ✨ Key Platform Features
+
+* **📱 Fully Responsive Design:** Mobile-first layout with smooth adaptability across mobile phones, tablets, laptops, and ultra-wide screens.
+* **📂 Sliding Mobile Navigation Drawer:** Touch-friendly drawer navigation featuring frosted glass blur (`backdrop-filter`) and smooth icon animations.
+* **⚡ Optimized Next-Gen Media:** All assets re-encoded into WebP with native lazy-loading, slashing overall payload by **>96% (from 23.5 MB to <0.9 MB)**.
+* **🌊 Seamless Page Transitions:** Custom non-intrusive ripple loading animation with intelligent browser shortcut support (`Ctrl+Click`, middle clicks).
+* **💬 Persistent Community Reviews:** Real-time feedback submission system backed by client-side `localStorage` persistence.
+* **♿ WCAG AA Accessibility:** Color palette engineered with **>5.5:1** contrast ratios for optimal readability and ARIA accessibility labels.
+* **📱 Progressive Web App (PWA) Ready:** Integrated `site.webmanifest` and multi-resolution icons for home screen bookmarking and installation.
+* **🌐 Complete Social Graph (SEO):** Rich Open Graph and Twitter Card metadata configured across all pages for instant social previews.
+
+---
+
+## 🚀 Quick Start
+
+### Prerequisites
+Ensure you have [Node.js](https://nodejs.org/) installed (version 18 or higher recommended).
+
+### 1. Clone & Install
+```bash
+git clone https://github.com/JordanCJ7/NobleTrust.git
+cd NobleTrust
+npm install
+```
+
+### 2. Compile Stylesheets
+```bash
+# One-time Sass build
+npm run sass
+
+# Auto-recompile during development
+npm run sass:watch
+
+# Production minified build
+npm run build
+```
+
+### 3. Launch Locally
+Open `index.html` in your favorite web browser or serve via Live Server:
+```bash
+npx serve .
+```
+
+---
+
+## 📁 Repository Structure
 
 ```
 NobleTrust/
 ├── css/
-│   ├── styles.css              # Compiled CSS file
-│   ├── styles.css.map          # Source map for debugging
-│   └── scss/                   # Sass source files
-│       ├── _about.scss         # About page styles
-│       ├── _contact.scss       # Contact page styles
-│       ├── _feedback.scss      # Feedback page styles
-│       ├── _footer.scss        # Footer styles
-│       ├── _header.scss        # Header styles
-│       ├── _homepage.scss      # Homepage specific styles
-│       ├── _mixins.scss        # Sass mixins
-│       ├── _packages.scss      # Packages page styles
-│       ├── _reset.scss         # Base reset styles
-│       ├── _slider.scss        # Image slider styles
-│       ├── _transitions.scss   # Page transition effects and animations
-│       ├── _variables.scss     # Sass variables
-│       └── main.scss           # Main Sass file that imports all partials
-├── images/                     # Optimized WebP image assets & favicons
-│   ├── Logo.png                # Master company logo
-│   ├── Logo.webp               # Optimized logo
-│   ├── CJ.webp                 # CEO photo (Janitha Gamage)
-│   ├── Damidu.webp             # Head of Customer Relations photo
-│   ├── Savidu.webp             # Claims Manager photo
-│   ├── LI 1.webp               # Life Insurance image
-│   ├── LI 2.webp               # Health Insurance image
-│   ├── LI 3.webp               # Vehicle Insurance image
-│   ├── LI 4.webp               # Property Insurance image
-│   ├── favicon-32x32.png       # 32x32 browser tab favicon
-│   ├── favicon.png             # General favicon
-│   ├── icon-192.png            # PWA manifest 192x192 icon
-│   └── icon-512.png            # PWA manifest 512x512 icon
+│   ├── styles.css                # Compiled production stylesheet
+│   └── scss/                     # 7-1 Sass source partials (_variables, _mixins, etc.)
+├── images/                       # Optimized WebP brand & product graphics
 ├── js/
-│   └── scripts.js              # JavaScript functionality
-├── site.webmanifest            # Progressive Web App manifest
-├── favicon.ico                 # Fallback browser icon
-├── about.html                  # About page with company info and team
-├── contact.html                # Contact page with form and contact details
-├── feedback.html               # Customer testimonials and feedback form
-├── index.html                  # Homepage with slider and company overview
-├── packages.html               # Insurance packages and product details
-└── package.json                # Node.js package file for Sass compilation
+│   └── scripts.js                # Core UI engine (Transitions, Drawer, Storage, Carousel)
+├── site.webmanifest              # PWA manifest
+├── index.html                    # Homepage
+├── packages.html                 # Insurance products
+├── about.html                    # Company legacy & leadership
+├── contact.html                  # Contact information & form
+├── feedback.html                 # Customer feedback & reviews
+├── package.json                  # Tooling & npm scripts
+├── TECHNICAL.md                  # Detailed architecture & technical documentation
+└── README.md                     # Project overview (this file)
 ```
 
-## Sass Implementation
+---
 
-This project uses Sass (SCSS syntax) for more maintainable and organized CSS. The styles are structured following a component-based approach with the 7-1 pattern (adapted):
+## 📖 Technical Documentation
 
-- **_variables.scss**: Contains all color definitions, font settings, spacing variables, and breakpoints
-- **_mixins.scss**: Contains reusable style patterns including:
-  - Flexbox helpers (`flex-center`, `flex-column`)
-  - Media query mixins for responsive design
-  - Button styling mixins
-  - Animation and transition mixins
-- **_reset.scss**: Base reset and global styles for consistent cross-browser rendering
-- **_transitions.scss**: Page transition animations and loading effects
-- **Layout components**:
-  - **_header.scss**: Navigation and site header styles
-  - **_footer.scss**: Site footer and bottom navigation
-  - **_slider.scss**: Image carousel implementation
-- **Page-specific styles**:
-  - **_homepage.scss**: Styles for the landing page and overview sections
-  - **_packages.scss**: Insurance product cards and pricing tables
-  - **_contact.scss**: Contact form and information display
-  - **_feedback.scss**: Testimonial styling and feedback form
-  - **_about.scss**: Company information, team profiles, and history section
+For deep technical insights including:
+- SCSS 7-1 modular breakdown & token definitions
+- JavaScript engine and transition lifecycle
+- Media compression benchmarks and methodology
+- WCAG AA color contrast specifications
+- Deployment configurations (GitHub Pages, Netlify, Vercel)
 
-The main.scss file imports all partials in the correct order to ensure proper cascade and specificity.
+👉 Please refer to [**TECHNICAL.md**](TECHNICAL.md).
 
-## Page Transitions
+---
 
-The site features smooth page transitions with a loading animation:
+## 👥 Leadership Team
 
-- Transition overlay appears when navigating between pages using the primary color scheme
-- Custom loader animation with dual-circle design provides visual feedback during page load
-- Smooth fade-in and fade-out effects enhance the user experience with 0.5s transition duration
-- Implemented using CSS transitions and JavaScript timing controls
-- Overlay is automatically triggered on page load and when clicking navigation links
+<div align="center">
+  <table>
+    <tr>
+      <td align="center">
+        <img src="images/CJ.webp" width="110" height="110" style="border-radius:50%;" alt="Janitha Gamage"><br>
+        <strong>Janitha Gamage</strong><br>
+        <em>Chief Executive Officer</em>
+      </td>
+      <td align="center">
+        <img src="images/Damidu.webp" width="110" height="110" style="border-radius:50%;" alt="Damidu Nayanajith"><br>
+        <strong>Damidu Nayanajith</strong><br>
+        <em>Head of Customer Relations</em>
+      </td>
+      <td align="center">
+        <img src="images/Savidu.webp" width="110" height="110" style="border-radius:50%;" alt="Savidu Madusanka"><br>
+        <strong>Savidu Madusanka</strong><br>
+        <em>Claims Manager</em>
+      </td>
+    </tr>
+  </table>
+</div>
 
-## Getting Started
+---
 
-### Prerequisites
+## 🤝 Contributing
 
-- Node.js and npm (for Sass compilation)
+Contributions are welcome! Please read [CONTRIBUTING.md](CONTRIBUTING.md) and our [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) before submitting pull requests.
 
-### Installation
+---
 
-1. Clone the repository:
-   ```
-   git clone https://github.com/JordanCJ7/NobleTrust.git
-   ```
+## 📄 License
 
-2. Install dependencies:
-   ```
-   npm install
-   ```
+This project is licensed under the [ISC License](LICENSE).
 
-3. Compile Sass to CSS:
-   ```
-   npm run sass
-   ```
-
-4. For development with auto-recompilation:
-   ```
-   npm run sass:watch
-   ```
-
-## Development
-
-To modify styles:
-
-1. Edit the appropriate .scss file in the css/scss directory
-2. The changes will be automatically compiled to styles.css if you're running sass:watch
-3. If not running the watch script, manually compile with `npm run sass`
-
-## Insurance Products
-
-NobleTrust offers a comprehensive range of insurance products:
-
-1. **Gold Health Plan**
-   - Cashless hospitalization
-   - Annual health checkups
-   - Family floater plans
-   - Wellness rewards
-
-2. **Gold Life Cover**
-   - Comprehensive life insurance
-   - Flexible terms
-   - High coverage
-   - Quick claim processing
-
-3. **Vehicle Insurance**
-   - Protection for cars, motorcycles, and other vehicles
-   - Comprehensive coverage options
-   - Roadside assistance
-
-4. **Property Insurance**
-   - Home and valuable asset protection
-   - Natural disaster coverage
-   - Theft and damage protection
-
-5. **Custom Business Solutions**
-   - Tailored packages for businesses
-   - Industry-specific coverage options
-   - Risk management services
-
-## Company Overview
-
-NobleTrust Insurance was founded in 2005 with a mission to deliver affordable, flexible, and transparent insurance coverage. The company has grown to become a trusted industry leader with a strong focus on customer-centricity and innovation.
-
-### Core Values
-- **Integrity**: Upholding the highest ethical standards
-- **Customer-Centricity**: Placing customer needs at the center of all decisions
-- **Innovation**: Continuously improving products and services
-- **Transparency**: Providing clear, honest communication
-- **Community**: Making a positive impact in served communities
-
-## Build Process
-
-For production builds, use the compressed output option:
-```
-npm run build
-```
-
-This will generate a minified CSS file for production use.
-
-## Design and UI Elements
-
-### Color Scheme
-The NobleTrust website uses a carefully selected color palette that conveys trust, stability, and premium service:
-
-- Primary color: Gold (#ffd700) - Represents prestige, value, and excellence
-- Primary dark: #bfa100 - Used for hover states and depth
-- Background: Light off-white (#f8f8f8) - Provides a clean, professional appearance
-- Text colors: Various shades from #222 to #555 - Ensures readability and hierarchy
-- Accents: Light cream (#fffbe6) and cream (#faf3c0) - Complement the gold tones
-
-### Typography
-- Primary font: Arial, sans-serif - Chosen for excellent readability across devices
-- Hierarchical type scale:
-  - Base font size: 1rem
-  - Headings scale from 1.2rem to 2.5rem
-  - Careful line spacing enhances readability
-
-### Responsive Design Implementation
-The website employs a mobile-first approach with responsive breakpoints:
-
-- **Mobile view** (< 768px): Single column layout, optimized navigation
-- **Tablet view** (768px - 1024px): Two-column grids, expanded navigation
-- **Desktop view** (> 1024px): Multi-column layout with enhanced visual elements
-
-The responsive implementation uses:
-- Fluid typography with rem units
-- Flexbox for component layouts
-- CSS Grid for page structure
-- Media queries to adjust layouts at breakpoints
-
-### Navigation
-- Horizontal navigation bar on desktop
-- Collapsible menu on mobile devices
-- Current page highlighting
-- Smooth hover transitions
-
-### Component Design
-- Card-based layout for insurance packages
-- Testimonial blocks with quotation styling
-- Team member profiles with circular image frames
-- Contact form with accessible input styling
-
-## JavaScript Functionality
-
-The website uses vanilla JavaScript to implement several interactive features:
-
-1. **Image Slider**
-   - Automatic rotation of insurance product images
-   - Touch-enabled swiping on mobile devices
-   - Pause on hover functionality
-
-2. **Page Transitions**
-   - Event listeners for navigation links
-   - DOM manipulation to show/hide the transition overlay
-   - Timing control for consistent animation duration
-
-3. **Form Validation**
-   - Real-time input validation
-   - Custom error messages
-   - Form submission handling
-
-4. **Responsive Navigation**
-   - Toggle functionality for mobile menu
-   - Active state management
-
-## Cross-Browser Compatibility
-
-The website has been tested and optimized for:
-
-- Chrome (latest version)
-- Firefox (latest version)
-- Safari (latest version)
-- Edge (latest version)
-- Mobile browsers (iOS Safari, Android Chrome)
-
-## Accessibility Features
-
-The NobleTrust website implements several accessibility features:
-
-- Semantic HTML5 structure for better screen reader compatibility
-- ARIA attributes where appropriate for interactive elements
-- Sufficient color contrast ratios meeting WCAG AA standards
-- Keyboard navigable interface
-- Alt text for all images
-- Focus states for interactive elements
-- Proper heading hierarchy
-
-## Performance Optimization
-
-The website employs several performance optimization techniques:
-
-1. **CSS Optimization**
-   - Sass compilation with compression for production
-   - Critical CSS inlining for above-the-fold content
-   - Efficient selector specificity
-
-2. **JavaScript Performance**
-   - Vanilla JS without heavy frameworks
-   - Event delegation for efficient event handling
-   - Debounced event handlers for scroll and resize events
-
-3. **Asset Optimization**
-   - Optimized image sizes and formats
-   - Lazy loading for below-the-fold images
-   - Minimal HTTP requests
-
-## Deployment Guidelines
-
-For deploying the NobleTrust website to production:
-
-1. Run the production build:
-   ```
-   npm run build
-   ```
-
-2. Verify all assets are properly referenced with correct paths
-
-3. Test the production build on a staging environment
-
-4. Implement a caching strategy for static assets
-
-5. Deploy to the production server via FTP or version-controlled deployment
-
-## Future Enhancements
-
-Planned future enhancements for the NobleTrust website:
-
-1. **Technical Improvements**
-   - Integration with a CMS for content management
-   - Implementation of a quote calculator tool
-   - Addition of a blog section for insurance tips and news
-   - Customer portal for account management
-
-2. **Design Enhancements**
-   - Dark mode toggle
-   - Enhanced animations and micro-interactions
-   - Improved mobile navigation experience
-   - Multi-language support
-
-3. **Business Features**
-   - Online policy purchasing
-   - Live chat support
-   - Integrated claims filing process
-   - Customer dashboard for policy management
+&copy; 2025–2026 NobleTrust Insurance. All rights reserved.

@@ -1,8 +1,8 @@
 {
   "name": "nobletrust",
   "version": "1.0.0",
-  "description": "aa",
-  "main": "index.js",
+  "description": "NobleTrust Insurance - Modern, responsive web platform with modular Sass styling, PWA support, and optimized assets.",
+  "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "sass": "sass css/scss/main.scss css/styles.css",
@@ -13,8 +13,15 @@
     "type": "git",
     "url": "git+https://github.com/JordanCJ7/NobleTrust.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "insurance",
+    "sass",
+    "responsive-design",
+    "webp",
+    "vanilla-js",
+    "pwa"
+  ],
+  "author": "Janitha Gamage",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/JordanCJ7/NobleTrust/issues"
