@@ -2,12 +2,59 @@
 
 document.addEventListener('DOMContentLoaded', function() {
     // -------------------------------------------------------------
-    // 1. Page Transition Animation & Non-Intrusive Navigation
+    // 1. Mobile Menu Drawer Toggle & Accessible Backdrop
+    // -------------------------------------------------------------
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const mainNav = document.querySelector('header nav');
+    
+    // Create backdrop element if it doesn't already exist
+    let backdrop = document.querySelector('.menu-backdrop');
+    if (!backdrop) {
+        backdrop = document.createElement('div');
+        backdrop.className = 'menu-backdrop';
+        document.body.appendChild(backdrop);
+    }
+
+    function toggleMobileMenu(forceState) {
+        if (!mainNav || !mobileMenuBtn) return;
+        const isOpen = typeof forceState === 'boolean' ? forceState : !mainNav.classList.contains('open');
+        
+        mainNav.classList.toggle('open', isOpen);
+        mobileMenuBtn.classList.toggle('open', isOpen);
+        mobileMenuBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        backdrop.classList.toggle('open', isOpen);
+
+        if (isOpen) {
+            document.body.style.overflow = 'hidden'; // Prevent background scrolling
+        } else {
+            document.body.style.overflow = '';
+        }
+    }
+
+    if (mobileMenuBtn && mainNav) {
+        mobileMenuBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            toggleMobileMenu();
+        });
+
+        backdrop.addEventListener('click', function() {
+            toggleMobileMenu(false);
+        });
+
+        // Close mobile drawer on Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && mainNav.classList.contains('open')) {
+                toggleMobileMenu(false);
+            }
+        });
+    }
+
+    // -------------------------------------------------------------
+    // 2. Page Transition Animation & Non-Intrusive Navigation
     // -------------------------------------------------------------
     const transitionOverlay = document.querySelector('.page-transition-overlay');
 
     if (transitionOverlay) {
-        // Smoothly fade out overlay once DOM is ready
         setTimeout(() => {
             transitionOverlay.classList.remove('active');
         }, 300);
@@ -18,6 +65,11 @@ document.addEventListener('DOMContentLoaded', function() {
     links.forEach(link => {
         const href = link.getAttribute('href');
         if (!href) return;
+
+        // Close mobile menu when navigating
+        link.addEventListener('click', function() {
+            toggleMobileMenu(false);
+        });
 
         // Only handle internal HTML page links
         const isInternalHtml = link.hostname === window.location.hostname &&
@@ -53,7 +105,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
                     setTimeout(() => {
                         window.location.href = target;
-                    }, 400);
+                    }, 350);
                 }
             });
         }
@@ -67,7 +119,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // -------------------------------------------------------------
-    // 2. Homepage Hero Image Slider
+    // 3. Homepage Hero Image Slider
     // -------------------------------------------------------------
     const sliderContainer = document.querySelector('.slider');
     const slides = document.querySelectorAll('.slides img');
@@ -108,7 +160,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // -------------------------------------------------------------
-    // 3. Customer Feedback Form & LocalStorage Persistence
+    // 4. Customer Feedback Form & LocalStorage Persistence
     // -------------------------------------------------------------
     const feedbackForm = document.getElementById('feedbackForm');
     const feedbackList = document.getElementById('feedbackList');
@@ -162,7 +214,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (items.length > 0) {
             const heading = document.createElement('h3');
             heading.style.textAlign = 'center';
-            heading.style.color = '#bfa100';
+            heading.style.color = '#7a5a00';
             heading.style.margin = '24px 0 16px 0';
             heading.textContent = 'Community Submissions (' + items.length + ')';
             feedbackList.appendChild(heading);
@@ -174,7 +226,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     if (feedbackForm && feedbackList) {
-        // Initial render of stored feedbacks
         renderFeedbacks();
 
         feedbackForm.addEventListener('submit', function(e) {
@@ -201,16 +252,13 @@ document.addEventListener('DOMContentLoaded', function() {
             saveFeedback(newItem);
             renderFeedbacks();
 
-            // Clear inputs
             feedbackForm.reset();
-
-            // Display success notification
             showNotification('Thank you! Your feedback has been published.', 'success');
         });
     }
 
     // -------------------------------------------------------------
-    // 4. Contact Form Submission Handling
+    // 5. Contact Form Submission Handling
     // -------------------------------------------------------------
     const contactForm = document.querySelector('.contact-form-area form');
     if (contactForm) {
@@ -222,7 +270,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // -------------------------------------------------------------
-    // 5. Utility Notification Toast & XSS Escape
+    // 6. Utility Notification Toast & XSS Escape
     // -------------------------------------------------------------
     function showNotification(msg, type = 'success') {
         const toast = document.createElement('div');
