@@ -56,17 +56,24 @@ NobleTrust/
 │       ├── _transitions.scss   # Page transition effects and animations
 │       ├── _variables.scss     # Sass variables
 │       └── main.scss           # Main Sass file that imports all partials
-├── images/                     # Image assets
-│   ├── Logo.png                # Company logo
-│   ├── CJ.jpg                  # CEO photo (Janitha Gamage)
-│   ├── Damidu.jpg              # Head of Customer Relations photo
-│   ├── Savidu.png              # Claims Manager photo
-│   ├── LI 1.png                # Life Insurance image
-│   ├── LI 2.png                # Health Insurance image
-│   ├── LI 3.png                # Vehicle Insurance image
-│   └── LI 4.png                # Property Insurance image
+├── images/                     # Optimized WebP image assets & favicons
+│   ├── Logo.png                # Master company logo
+│   ├── Logo.webp               # Optimized logo
+│   ├── CJ.webp                 # CEO photo (Janitha Gamage)
+│   ├── Damidu.webp             # Head of Customer Relations photo
+│   ├── Savidu.webp             # Claims Manager photo
+│   ├── LI 1.webp               # Life Insurance image
+│   ├── LI 2.webp               # Health Insurance image
+│   ├── LI 3.webp               # Vehicle Insurance image
+│   ├── LI 4.webp               # Property Insurance image
+│   ├── favicon-32x32.png       # 32x32 browser tab favicon
+│   ├── favicon.png             # General favicon
+│   ├── icon-192.png            # PWA manifest 192x192 icon
+│   └── icon-512.png            # PWA manifest 512x512 icon
 ├── js/
 │   └── scripts.js              # JavaScript functionality
+├── site.webmanifest            # Progressive Web App manifest
+├── favicon.ico                 # Fallback browser icon
 ├── about.html                  # About page with company info and team
 ├── contact.html                # Contact page with form and contact details
 ├── feedback.html               # Customer testimonials and feedback form
