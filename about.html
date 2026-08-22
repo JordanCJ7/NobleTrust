@@ -5,6 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Learn about NobleTrust Insurance, our 20+ year legacy of trust, our core values, and the leadership team dedicated to your protection.">
     <meta name="theme-color" content="#ffd700">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="NobleTrust Insurance">
+    <meta property="og:title" content="About Us - NobleTrust Insurance">
+    <meta property="og:description" content="Learn about NobleTrust Insurance, our 20+ year legacy of trust, our core values, and our leadership team.">
+    <meta property="og:image" content="images/icon-512.png">
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="About Us - NobleTrust Insurance">
+    <meta name="twitter:description" content="Learn about NobleTrust Insurance, our 20+ year legacy of trust, our core values, and our leadership team.">
+    <meta name="twitter:image" content="images/icon-512.png">
     <title>About Us - NobleTrust Insurance</title>
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
     <link rel="icon" type="image/png" href="images/favicon.png">
@@ -19,12 +30,17 @@
     <header>
         <a href="index.html"><img src="images/Logo.webp" alt="NobleTrust Logo" class="header-logo"></a>
         <h1><a href="index.html" class="header-home-link">NobleTrust</a></h1>
-        <nav>
+        <button class="mobile-menu-btn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="main-nav">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav id="main-nav" aria-label="Main Navigation">
             <a href="index.html">Home</a>
             <a href="packages.html">Packages</a>
             <a href="feedback.html">Feedback</a>
             <a href="contact.html">Contact Us</a>
-            <a href="about.html">About Us</a>
+            <a href="about.html" class="active">About Us</a>
         </nav>
     </header>
     <section class="about">

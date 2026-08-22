@@ -5,6 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="NobleTrust offers comprehensive insurance solutions for life, health, vehicle, and property. Protecting what matters most for over 20 years.">
     <meta name="theme-color" content="#ffd700">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="NobleTrust Insurance">
+    <meta property="og:title" content="NobleTrust Insurance - Comprehensive & Trusted Coverage">
+    <meta property="og:description" content="Affordable and reliable insurance solutions for life, health, vehicles, and property. Protecting what matters most for over 20 years.">
+    <meta property="og:image" content="images/icon-512.png">
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="NobleTrust Insurance - Comprehensive & Trusted Coverage">
+    <meta name="twitter:description" content="Affordable and reliable insurance solutions for life, health, vehicles, and property.">
+    <meta name="twitter:image" content="images/icon-512.png">
     <title>NobleTrust Insurance - Comprehensive & Trusted Coverage</title>
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
     <link rel="icon" type="image/png" href="images/favicon.png">
@@ -19,8 +30,13 @@
     <header class="home-header">
         <a href="index.html"><img src="images/Logo.webp" alt="NobleTrust Logo" class="header-logo"></a>
         <h1><a href="index.html" class="header-home-link">NobleTrust</a></h1>
-        <nav>
-            <a href="index.html">Home</a>
+        <button class="mobile-menu-btn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="main-nav">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav id="main-nav" aria-label="Main Navigation">
+            <a href="index.html" class="active">Home</a>
             <a href="packages.html">Packages</a>
             <a href="feedback.html">Feedback</a>
             <a href="contact.html">Contact Us</a>
