@@ -42,13 +42,22 @@
 }
 
 #feedbackList {
-  margin-top: 30px;
+  max-width: 500px;
+  margin: 30px auto 0 auto;
   
   .feedback-item {
-    background: $cream;
-    padding: 10px;
-    border-radius: 6px;
-    margin-bottom: 10px;
+    background: $light-cream;
+    border-left: 4px solid $primary-color-dark;
+    padding: 14px 18px;
+    border-radius: $border-radius-medium;
+    margin-bottom: 14px;
+    box-shadow: $box-shadow-light;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: $box-shadow-gold-light;
+    }
   }
 }
 
