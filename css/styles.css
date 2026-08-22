@@ -719,13 +719,21 @@ footer {
 }
 
 #feedbackList {
-  margin-top: 30px;
+  max-width: 500px;
+  margin: 30px auto 0 auto;
 }
 #feedbackList .feedback-item {
-  background: #faf3c0;
-  padding: 10px;
-  border-radius: 6px;
-  margin-bottom: 10px;
+  background: #fffbe6;
+  border-left: 4px solid #bfa100;
+  padding: 14px 18px;
+  border-radius: 10px;
+  margin-bottom: 14px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+#feedbackList .feedback-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 2px 12px rgba(255, 215, 0, 0.13);
 }
 
 .feedback-cta {
