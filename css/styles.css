@@ -152,10 +152,10 @@ header h1 a.header-home-link:hover {
 
 nav {
   margin-top: 0;
-  margin-left: 600px;
+  margin-left: auto;
   display: flex;
   align-items: center;
-  gap: 40px;
+  gap: 20px;
 }
 nav a {
   margin: 0 6px;
@@ -281,6 +281,11 @@ footer {
   background: linear-gradient(120deg, #fffbe6 60%, rgba(255, 215, 0, 0.13) 100%);
   box-shadow: 0 2px 12px rgba(191, 161, 0, 0.07);
   border-radius: 18px;
+}
+@media (max-width: 700px) {
+  .overview {
+    margin-top: 40vh;
+  }
 }
 .overview h2 {
   font-size: 2.2rem;
